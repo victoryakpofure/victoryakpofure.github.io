@@ -1,0 +1,21 @@
+$breakpoints: (
+  "mobile": "480px",
+  "min-mobile": "481px",
+  "desktop": "1024px",
+);
+
+@mixin breakpoint($device) {
+  @media (max-width: map-get($breakpoints, $device)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-up($device) {
+  @media (min-width: map-get($breakpoints, $device)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  display: none;
+}

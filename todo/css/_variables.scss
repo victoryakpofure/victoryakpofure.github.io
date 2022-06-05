@@ -1,0 +1,71 @@
+//colors
+:root {
+  --background: hsl(235, 21%, 11%);
+  --primary-color: hsl(235, 24%, 19%);
+  --text-color: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue: hsl(234, 11%, 52%);
+  --text-color-2: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue-2: hsl(237, 14%, 26%);
+  --accent-color: hsl(220, 98%, 61%);
+}
+.light-theme {
+  --primary-color: hsl(0, 0%, 98%);
+  --background: hsl(236, 33%, 92%);
+  --light-grayish-blue-hover: hsl(233, 11%, 84%);
+  --text-color-2: hsl(236, 9%, 61%);
+  // --very-dark-grayish-blue: hsl(235, 19%, 35%);
+  --text-color: hsl(235, 19%, 35%);
+  --accent-color: hsl(220, 98%, 61%);
+
+  .moon-bg {
+    background: url("../images/icon-moon.svg") no-repeat;
+  }
+  background-image: url("../images/bg-desktop-light.jpg");
+
+  @include breakpoint(mobile) {
+    background-image: url("../images/bg-mobile-light.jpg");
+  }
+}
+.dark-theme {
+  --background: hsl(235, 21%, 11%);
+  --primary-color: hsl(235, 24%, 19%);
+  --text-color: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue: hsl(234, 11%, 52%);
+  --text-color-2: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue-2: hsl(237, 14%, 26%);
+  --accent-color: hsl(220, 98%, 61%);
+
+  .sun-bg {
+    background: url("../images/icon-sun.svg") no-repeat;
+  }
+  background-image: url("../images/bg-desktop-dark.jpg");
+
+  @include breakpoint(mobile) {
+    background-image: url("../images/bg-mobile-dark.jpg");
+  }
+}
+
+$check-background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-color: hsl(0, 0%, 98%);
+    --background: hsl(236, 33%, 92%);
+    --light-grayish-blue-hover: hsl(233, 11%, 84%);
+    --text-color-2: hsl(236, 9%, 61%);
+    // --very-dark-grayish-blue: hsl(235, 19%, 35%);
+    --text-color: hsl(235, 19%, 35%);
+    --accent-color: hsl(220, 98%, 61%);
+  }
+}
+
+//font
+$font-family: "Josefin Sans", sans-serif;
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
