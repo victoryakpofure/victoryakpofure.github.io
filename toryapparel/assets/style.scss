@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Poppins:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.lSAction{
+    background: grey;
+    border-radius: 50%;
+    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/img/controls.png');
+}
+
+#autoWidth, #product{
+    height: 25rem;
+}
+.box{
+    width: 200px;
+    box-shadow: 2px 2px 5px rgba(225, 225, 225, .7);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem ;
+    cursor: pointer;
+}
+
+.slide-img{
+    height: 250px;
+    position: relative;
+    
+}
+
+.slide-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+    transition: .7s;
+    &:hover{
+        transform: scale(1);
+    }
+}
+
+.detail-box{
+    width: 100%;
+    padding: 1rem;
+    font-size: 14px;
+}
+
+
+i{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+.logo{
+    a{
+        font-family: 'Neonderthaw', cursive;
+    }
+}
+button{
+    padding: .5rem 1.3rem;
+    border: 1px solid black;
+    background: transparent;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(225, 225, 225, .02);
+    backdrop-filter: blur(12px);
+}
+.bbtn{
+    background: black;
+    color: white;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    .img{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .image{
+            width: 25rem;
+            height: 20rem;
+            background: grey;
+            border-radius: 5px;
+            img {
+                // display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+        }
+    }
+    .txt{
+        padding: 1rem 0;
+        width: 50%;
+    }
+  }
+
+
+main{
+    padding: 3rem;
+    .main1{
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 1rem;
+        position: relative;
+       
+        .txt{
+            width: 70%;
+        }
+        button{
+            margin: 1rem 0;
+        }
+    }
+}
+article{
+    padding: 3rem;
+    .categories{
+        .row{
+            .car{
+                flex-direction: column;
+                padding: .5rem;
+                .img{
+                    height: 20rem;
+                    border-radius: 10px;
+                    background: rgba(225, 225, 225, .7);
+                    width: 100%;
+                }
+                .txt{
+                    text-align: center;
+                    margin: .5rem;
+                }
+            }
+            
+        }
+    }
+    .talk{
+        margin-top: 3rem;
+        position: relative;
+        .swiper-slide{
+            padding: 0;
+        }
+        .flip{
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+@media screen and (max-width: 888px) {
+    header{
+        display: flex;
+        height: 3rem;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+        box-shadow: 0px 2px 5px rgba(225, 225, 225, .7);
+        a{
+            color: black;
+        }
+        .desktop_menu{
+                display: none;
+        }
+        .ham{
+            display: block;
+            font-size: 22px;
+        }
+        .mobile_icons{
+            i{
+                margin-left: 10px;
+            }
+        }
+        .mobile_menu{
+            position: absolute;
+            height: 100vh;
+            width: 70vw;
+            top: 0;
+            left: 0;
+            box-shadow: 2px 0 5px rgba(225, 225, 225, .7);
+            padding: 1rem;
+            line-height: 2rem;
+            z-index: 999;
+            background: white;
+            transition: .7s ease;
+          input{
+            width: 95%;
+          }
+            
+            .hamx{
+                position: absolute;
+                height: 2rem;
+                width: 2rem;
+                box-shadow: 2px 2px 5px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                left: 105%;
+                background: white;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            .div{
+                border-bottom: 1px solid grey;
+            }
+            li{
+                list-style: none;
+            }
+
+        }
+        
+    }
+    .cls{
+        display: none;
+    }
+    aside{
+        .swiper-button-prev, .swiper-button-next{
+            display: none;
+        }
+        padding: 1.5rem;
+        .swiper-slide {
+            flex-direction: column;
+            .img, .txt{
+                width: 100%;
+            }
+        }
+    }
+    main{
+        padding: 1.5rem;
+        .main1{
+            .txt{
+                width: 100%;
+            }
+        }
+    }
+    article{
+        padding: 1.5rem;
+        .talk{
+            .swiper-slide {
+                flex-direction: column;
+                padding: 0;
+                .img, .txt{
+                    justify-content: flex-start;
+                    width: 100%;
+                }
+            }
+
+        }
+        
+    }
+}
+
+@media screen and (min-width: 888px) {
+    header{
+        display: flex;
+        align-items: center;
+        height: 70px;
+        box-shadow: 0 2px 5px rgba(225, 225, 225, .7);
+        justify-content: space-between;
+        padding: 0 3rem;
+        a{
+            color: black;
+        }
+        .ham{
+            display: none;
+        }
+        .mobile_menu{
+            display: none;
+        }
+        .mobile_icons{
+            display: none;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            input{
+                height: 2.5rem;
+                width: 20rem;
+                padding: 0 1.5rem;
+                border-radius: 20px;
+                border: 1px solid black;
+                background: transparent;
+            }
+            i{
+                font-size: 25px;
+            }
+        }
+
+    }
+    aside{
+        padding: 0 3rem;
+    }
+}
+@media screen and (max-width: 1110px) {
+    .business{
+        width: 10rem;
+    }
+}
