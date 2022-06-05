@@ -52,7 +52,6 @@ button {
 
 footer {
   background: black;
-  bottom: 0;
   width: 100vw;
   color: white;
   height: 3rem;
@@ -182,7 +181,6 @@ footer .social-links a:hover {
 
 footer {
   position: absolute;
-  bottom: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
